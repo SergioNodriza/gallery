@@ -1,0 +1,16 @@
+
+#################################### USERS #########################################
+
+POST http://localhost:250/api/v1/users/register
+Content-Type: application/json
+
+{
+  "name": "Admin",
+  "email": "admin@nodrizatech.com",
+  "password": "Nodriza@01",
+  "roles": [
+    "ROLE_ADMIN"
+  ]
+}
+
+####################

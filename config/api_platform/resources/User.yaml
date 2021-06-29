@@ -1,0 +1,23 @@
+App\Entity\User:
+
+  attributes:
+    normalization_context:
+      groups: [user_read]
+
+  collectionOperations:
+    register:
+      method: POST
+      path: /users/register
+      controller: App\Api\Action\User\Register
+      denormalization_context:
+        groups: [ user_register ]
+#      security_post_denormalize: is_granted("USER_CREATE", object)
+#      security_post_denormalize_message: 'Wrong Permissions, You can not register an User'
+      openapi_context:
+        summary: Register a new user
+
+  itemOperations:
+    get:
+      method: GET
+#      security: is_granted("USER_READ")
+#      security_message: 'Wrong Permissions, You can not get an User'
