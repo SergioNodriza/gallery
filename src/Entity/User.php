@@ -11,8 +11,8 @@ use Symfony\Component\Uid\Uuid;
 /**
  * @ApiResource()
  * @ORM\Entity(repositoryClass=UserRepository::class)
- * @method string getUserIdentifier()
  * @ORM\HasLifecycleCallbacks()
+ * @method string getUserIdentifier()
  */
 class User implements UserInterface
 {
@@ -127,11 +127,11 @@ class User implements UserInterface
 
     public function getUsername(): string
     {
-        return $this->name;
+        return $this->email;
     }
 
     public function __call($name, $arguments)
     {
-        return $this->getUsername();
+        // TODO: Implement @method string getUserIdentifier()
     }
 }

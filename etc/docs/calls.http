@@ -1,7 +1,7 @@
 
 #################################### USERS #########################################
 
-POST http://localhost:250/api/v1/users/register
+POST http://localhost:250/api/users/register
 Content-Type: application/json
 
 {
@@ -11,6 +11,20 @@ Content-Type: application/json
   "roles": [
     "ROLE_ADMIN"
   ]
+}
+
+####################
+
+GET http://localhost:250/api/users/1
+
+####################
+
+GET http://localhost:250/api/users/login_check
+Content-Type: application/json
+
+{
+  "username": "admin@nodrizatech.com",
+  "password": "Nodriza@01"
 }
 
 ####################
