@@ -4,9 +4,7 @@ namespace App\Service\User;
 
 use App\Entity\User;
 use App\Exceptions\User\AlreadyExistsException;
-use App\Repository\UserRepository;
 use App\Service\Password\EncoderService;
-use App\Service\Request\RequestService;
 use Doctrine\ORM\EntityManagerInterface;
 use Exception;
 use Symfony\Component\HttpFoundation\Request;
@@ -22,12 +20,8 @@ class UserRegisterService
         $this->entityManager = $entityManager;
     }
 
-    public function create(Request $request): User
+    public function create($name, $email, $password): User
     {
-        $name = $request->toArray()['name'];
-        $email = $request->toArray()['email'];
-        $password = $request->toArray()['password'];
-
         $user = new User($name, $email);
         $user->setPassword($this->encoderService->generateEncodedPassword($user, $password));
 

@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Uid\Uuid;
@@ -47,20 +49,26 @@ class User implements UserInterface
      */
     private array $roles = ['ROLE_USER'];
 
+    /**
+     * @ORM\OneToMany(targetEntity=Photo::class, mappedBy="user", orphanRemoval=true)
+     */
+    private Collection $photos;
+
 
     public function __construct(string $name, $email) {
         $this->id = Uuid::v4()->toRfc4122();
         $this->name = $name;
         $this->email = $email;
+        $this->photos = new ArrayCollection();
     }
 
 
-    public function getId(): ?string
+    public function getId(): string
     {
         return $this->id;
     }
 
-    public function getName(): ?string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -72,7 +80,7 @@ class User implements UserInterface
         return $this;
     }
 
-    public function getEmail(): ?string
+    public function getEmail(): string
     {
         return $this->email;
     }
@@ -84,7 +92,7 @@ class User implements UserInterface
         return $this;
     }
 
-    public function getPassword(): ?string
+    public function getPassword(): string
     {
         return $this->password;
     }
@@ -96,7 +104,7 @@ class User implements UserInterface
         return $this;
     }
 
-    public function getRoles(): ?array
+    public function getRoles(): array
     {
         return $this->roles;
     }

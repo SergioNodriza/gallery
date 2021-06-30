@@ -1,0 +1,18 @@
+App\Entity\Photo:
+  attributes:
+    id:
+      groups: [ photo_read ]
+    archive:
+      groups: [ photo_read, photo_create ]
+    description:
+      groups: [ photo_read, photo_create, photo_update ]
+    likes:
+      groups: [ photo_read ]
+    private:
+      groups: [ photo_read, photo_create, photo_update ]
+    user:
+      groups: [ photo_read, photo_create ]
+    createdAt:
+      groups: [ photo_read ]
+    updatedAt:
+      groups: [ photo_read ]
