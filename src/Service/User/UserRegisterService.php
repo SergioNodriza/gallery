@@ -27,11 +27,9 @@ class UserRegisterService
         $name = $request->toArray()['name'];
         $email = $request->toArray()['email'];
         $password = $request->toArray()['password'];
-        $roles = $request->toArray()['roles'];
 
         $user = new User($name, $email);
         $user->setPassword($this->encoderService->generateEncodedPassword($user, $password));
-        $user->setRoles($roles);
 
         try {
 

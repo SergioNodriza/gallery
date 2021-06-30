@@ -23,8 +23,7 @@ class User implements UserInterface
 
     /**
      * @ORM\Id
-     * @ORM\GeneratedValue
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string")
      */
     private string $id;
 
@@ -39,14 +38,14 @@ class User implements UserInterface
     private string $email;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255)
      */
-    private ?string $password;
+    private string $password;
 
     /**
      * @ORM\Column(type="array")
      */
-    private array $roles = [];
+    private array $roles = ['ROLE_USER'];
 
 
     public function __construct(string $name, $email) {
@@ -56,7 +55,7 @@ class User implements UserInterface
     }
 
 
-    public function getId(): ?int
+    public function getId(): ?string
     {
         return $this->id;
     }

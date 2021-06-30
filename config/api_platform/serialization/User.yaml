@@ -9,7 +9,7 @@ App\Entity\User:
     password:
       groups: [ user_register ]
     roles:
-      groups: [ user_read, user_register, user_update ]
+      groups: [ user_read ]
     createdAt:
       groups: [ user_read ]
     updatedAt:

@@ -43,6 +43,8 @@
         "symfony/yaml": "5.3.*"
     },
     "require-dev": {
+        "hautelook/alice-bundle": "^2.9",
+        "liip/test-fixtures-bundle": "^1.0.0",
         "symfony/maker-bundle": "^1.32"
     },
     "config": {

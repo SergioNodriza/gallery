@@ -5,12 +5,9 @@ POST http://localhost:250/api/users/register
 Content-Type: application/json
 
 {
-  "name": "Admin",
-  "email": "admin@nodrizatech.com",
-  "password": "Nodriza@01",
-  "roles": [
-    "ROLE_ADMIN"
-  ]
+  "name": "User",
+  "email": "user@email.com",
+  "password": "User@01"
 }
 
 ####################
@@ -23,8 +20,8 @@ GET http://localhost:250/api/users/login_check
 Content-Type: application/json
 
 {
-  "username": "admin@nodrizatech.com",
-  "password": "Nodriza@01"
+  "username": "user@email.com",
+  "password": "User@01"
 }
 
 ####################
