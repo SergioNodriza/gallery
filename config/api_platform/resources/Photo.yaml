@@ -57,10 +57,31 @@ App\Entity\Photo:
                     type: string
                   user:
                     type: string
+              examples:
+                Like:
+                  value:
+                    value: like
+                    name: User IRI
+                Dislike:
+                  value:
+                    value: dislike
+                    name: User IRI
         responses:
-          204:
-            description: OK
-
+          200:
+            description: Result
+            content:
+              text/plain:
+                schema:
+                  type: string
+                examples:
+                  Liked:
+                    value: Liked
+                  Disliked:
+                    value: Disliked
+                  Already Liked:
+                    value: Already Liked
+                  Already Disliked:
+                    value: Already Disliked
   properties:
     owner:
       subresource:

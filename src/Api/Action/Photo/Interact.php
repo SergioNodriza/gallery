@@ -3,10 +3,9 @@
 
 namespace App\Api\Action\Photo;
 
-
-use App\Entity\Photo;
 use App\Service\Photo\PhotoInteractService;
 use Exception;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 
@@ -19,7 +18,7 @@ class Interact
         $this->photoLikeService = $photoLikeService;
     }
 
-    public function __invoke(Request $request, string $id): Photo
+    public function __invoke(Request $request, string $id): JsonResponse
     {
         try {
             $value = $request->toArray()['value'];
@@ -28,6 +27,7 @@ class Interact
             throw new BadRequestHttpException('Wrong Body Format');
         }
 
-        return $this->photoLikeService->like($value, $id, $userIri);
+        $result = $this->photoLikeService->like($value, $id, $userIri);
+        return new JsonResponse($result, 200, [], true);
     }
 }

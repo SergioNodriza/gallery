@@ -7,6 +7,7 @@ use App\Entity\Group;
 use App\Service\Group\GroupPhotoService;
 use App\Service\Group\GroupCreateService;
 use Exception;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 
@@ -19,7 +20,7 @@ class Photo
         $this->groupAddPhotoService = $groupAddPhotoService;
     }
 
-    public function __invoke(Request $request, string $id): Group
+    public function __invoke(Request $request, string $id): JsonResponse
     {
         try {
             $value = $request->toArray()['value'];
@@ -28,6 +29,7 @@ class Photo
             throw new BadRequestHttpException('Wrong Body Format');
         }
 
-        return $this->groupAddPhotoService->addPhoto($id, $value, $photoIri);
+        $result = $this->groupAddPhotoService->addPhoto($id, $value, $photoIri);
+        return new JsonResponse($result, 200, [], true);
     }
 }

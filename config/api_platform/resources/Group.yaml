@@ -58,9 +58,31 @@ App\Entity\Group:
                     type: string
                   photo:
                     type: string
-          responses:
-            204:
-              description: OK
+              examples:
+                Add:
+                  value:
+                    value: add
+                    name: Photo IRI
+                Remove:
+                  value:
+                    value: remove
+                    name: Photo IRI
+        responses:
+          '200':
+            description: OK
+            content:
+              text/plain:
+                schema:
+                  type: string
+                examples:
+                  Added:
+                    value: Added
+                  Removed:
+                    value: Removed
+                  Already Added:
+                    value: Already Added
+                  Already Removed:
+                    value: Already Removed
 
   properties:
     photos:
