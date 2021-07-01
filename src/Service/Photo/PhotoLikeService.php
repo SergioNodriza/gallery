@@ -8,7 +8,6 @@ use App\Exceptions\Photo\PhotoException;
 use App\Repository\PhotoRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Exception;
-use Symfony\Component\HttpFoundation\Request;
 
 class PhotoLikeService
 {
@@ -21,16 +20,26 @@ class PhotoLikeService
         $this->photoRepository = $photoRepository;
     }
 
-    public function like($value, string $id): Photo
+    public function like($value, $photoId, $userIri): Photo
     {
-        $photo = $this->photoRepository->findOneBy(['id' => $id]);
+        $photo = $this->photoRepository->findOneBy(['id' => $photoId]);
+        $userId = substr($userIri, 11);
+
+        $usersLiked = $photo->getUsersLiked();
+        $liked = in_array($userId, $usersLiked, true);
 
         switch ($value) {
             case "like":
-                $photo->addLike();
+                if ($liked === false) {
+                    $photo->addLike();
+                    $photo->addUsersLiked($userId);
+                }
                 break;
             case "dislike":
-                $photo->removeLike();
+                if ($liked === true) {
+                    $photo->removeLike();
+                    $photo->removeUsersLiked($userId);
+                }
                 break;
             default:
                 throw PhotoException::fromRequestBodyFormat();

@@ -23,10 +23,11 @@ class Like
     {
         try {
             $value = $request->toArray()['value'];
+            $userIri = $request->toArray()['user'];
         } catch (Exception $exception) {
             throw new BadRequestHttpException('Wrong Body Format');
         }
 
-        return $this->photoLikeService->like($value, $id);
+        return $this->photoLikeService->like($value, $id, $userIri);
     }
 }

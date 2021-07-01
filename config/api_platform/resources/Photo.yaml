@@ -55,9 +55,8 @@ App\Entity\Photo:
                 properties:
                   value:
                     type: string
-                    required: true
-              example:
-                value: like
+                  user:
+                    type: string
         responses:
           204:
             description: OK

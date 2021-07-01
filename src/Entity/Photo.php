@@ -10,9 +10,15 @@ use Symfony\Component\Uid\Uuid;
 /**
  * @ApiResource()
  * @ORM\Entity(repositoryClass=PhotoRepository::class)
+ * @ORM\HasLifecycleCallbacks()
  */
 class Photo
 {
+    /*
+    * Timestampable trait
+    */
+    use Timestampable;
+
     /**
      * @ORM\Id
      * @ORM\Column(type="string")
@@ -44,6 +50,10 @@ class Photo
      */
     private User $user;
 
+    /**
+     * @ORM\Column(type="array", nullable=true)
+     */
+    private array $usersLiked = [];
 
     public function __construct($archive, $description, $private, $user) {
         $this->id = Uuid::v4()->toRfc4122();
@@ -135,5 +145,32 @@ class Photo
     public function setUser(User $user): void
     {
         $this->user = $user;
+    }
+
+    public function getUsersLiked(): array
+    {
+        return $this->usersLiked;
+    }
+
+    public function setUsersLiked(array $usersLiked): self
+    {
+        $this->usersLiked = $usersLiked;
+
+        return $this;
+    }
+
+    public function addUsersLiked(string $user): void
+    {
+        if (in_array($user, $this->usersLiked, true)) {
+            return;
+        }
+        $this->usersLiked[] = $user;
+    }
+
+    public function removeUsersLiked(string $user): void
+    {
+        if (($key = array_search($user, $this->usersLiked, true)) !== false) {
+            unset($this->usersLiked[$key]);
+        }
     }
 }

@@ -31,6 +31,16 @@ security:
                 failure_handler: lexik_jwt_authentication.handler.authentication_failure
                 require_previous_session: false
 
+        getUsers:
+            pattern: ^/api/users
+            methods: [ GET ]
+            security: false
+
+        getUser:
+            pattern: ^/api/users/.*
+            methods: [ GET ]
+            security: false
+
         getPhotos:
             pattern: ^/api/photos
             methods: [GET]
