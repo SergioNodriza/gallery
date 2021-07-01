@@ -62,8 +62,13 @@ App\Entity\User:
         groups: [ user_update ]
 
   properties:
-    services:
+    photos:
       subresource:
         resourceClass: App\Entity\Photo
+        collection: true
+        maxDepth: 1
+    groups:
+      subresource:
+        resourceClass: App\Entity\Group
         collection: true
         maxDepth: 1

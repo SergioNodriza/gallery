@@ -10,6 +10,10 @@ App\Entity\User:
       groups: [ user_register ]
     roles:
       groups: [ user_read ]
+    photos:
+      groups: [ user_read ]
+    groups:
+      groups: [ user_read ]
     createdAt:
       groups: [ user_read ]
     updatedAt:

@@ -50,9 +50,14 @@ class User implements UserInterface
     private array $roles = ['ROLE_USER'];
 
     /**
-     * @ORM\OneToMany(targetEntity=Photo::class, mappedBy="user", orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity=Photo::class, mappedBy="owner", orphanRemoval=true)
      */
     private Collection $photos;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Group::class, mappedBy="owner", orphanRemoval=true)
+     */
+    private Collection $groups;
 
 
     public function __construct(string $name, $email) {
@@ -60,6 +65,7 @@ class User implements UserInterface
         $this->name = $name;
         $this->email = $email;
         $this->photos = new ArrayCollection();
+        $this->groups = new ArrayCollection();
     }
 
 
@@ -140,5 +146,54 @@ class User implements UserInterface
     public function __call($name, $arguments)
     {
         // TODO: Implement @method string getUserIdentifier()
+    }
+
+    /**
+     * @return ArrayCollection|Collection
+     */
+    public function getPhotos()
+    {
+        return $this->photos;
+    }
+
+    public function addIncident(Photo $photo): self
+    {
+        if (!$this->photos->contains($photo)) {
+            $this->photos[] = $photo;
+        }
+
+        return $this;
+    }
+
+    public function removeIncident(Photo $photo): self
+    {
+        $this->photos->removeElement($photo);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Group[]
+     */
+    public function getGroups(): Collection
+    {
+        return $this->groups;
+    }
+
+    public function addGroup(Group $group): self
+    {
+        if (!$this->groups->contains($group)) {
+            $this->groups[] = $group;
+            $group->setOwner($this);
+        }
+
+        return $this;
+    }
+
+    public function removeGroup(Group $group): self
+    {
+        $this->groups->removeElement($group);
+
+        return $this;
     }
 }

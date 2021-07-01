@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use ApiPlatform\Core\Annotation\ApiResource;
 use App\Repository\PhotoRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Uid\Uuid;
 
@@ -48,19 +50,25 @@ class Photo
     /**
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="photos")
      */
-    private User $user;
+    private User $owner;
 
     /**
      * @ORM\Column(type="array", nullable=true)
      */
     private array $usersLiked = [];
 
+    /**
+     * @ORM\ManyToMany(targetEntity=Group::class, mappedBy="photos")
+     */
+    private Collection $groups;
+
     public function __construct($archive, $description, $private, $user) {
         $this->id = Uuid::v4()->toRfc4122();
         $this->archive = $archive;
         $this->description = $description;
         $this->private = $private;
-        $this->user = $user;
+        $this->owner = $user;
+        $this->groups = new ArrayCollection();
     }
 
 
@@ -134,17 +142,17 @@ class Photo
     /**
      * @return User
      */
-    public function getUser(): User
+    public function getOwner(): User
     {
-        return $this->user;
+        return $this->owner;
     }
 
     /**
      * @param User $user
      */
-    public function setUser(User $user): void
+    public function setOwner(User $user): void
     {
-        $this->user = $user;
+        $this->owner = $user;
     }
 
     public function getUsersLiked(): array
@@ -172,5 +180,32 @@ class Photo
         if (($key = array_search($user, $this->usersLiked, true)) !== false) {
             unset($this->usersLiked[$key]);
         }
+    }
+
+    /**
+     * @return Collection|Group[]
+     */
+    public function getGroups(): Collection
+    {
+        return $this->groups;
+    }
+
+    public function addGroups(Group $groups): self
+    {
+        if (!$this->groups->contains($groups)) {
+            $this->groups[] = $groups;
+            $groups->addPhoto($this);
+        }
+
+        return $this;
+    }
+
+    public function removeGroups(Group $groups): self
+    {
+        if ($this->groups->removeElement($groups)) {
+            $groups->removePhoto($this);
+        }
+
+        return $this;
     }
 }
