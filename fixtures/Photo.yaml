@@ -1,0 +1,20 @@
+
+App\Entity\Photo:
+  Photo-0:
+    __construct:
+      archive: archive0
+      description: description0
+      private: true
+      owner: '@User-0'
+  Photo-1:
+    __construct:
+      archive: archive1
+      description: description1
+      private: false
+      owner: '@User-0'
+  Photo-2:
+    __construct:
+      archive: archive2
+      description: description2
+      private: false
+      owner: '@User-1'
