@@ -9,7 +9,7 @@ use App\Repository\PhotoRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Exception;
 
-class PhotoLikeService
+class PhotoInteractService
 {
     private EntityManagerInterface $entityManager;
     private PhotoRepository $photoRepository;
@@ -31,13 +31,11 @@ class PhotoLikeService
         switch ($value) {
             case "like":
                 if ($liked === false) {
-                    $photo->addLike();
                     $photo->addUsersLiked($userId);
                 }
                 break;
             case "dislike":
                 if ($liked === true) {
-                    $photo->removeLike();
                     $photo->removeUsersLiked($userId);
                 }
                 break;

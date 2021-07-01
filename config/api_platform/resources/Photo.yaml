@@ -37,16 +37,16 @@ App\Entity\Photo:
 
     delete:
       method: DELETE
-#      security: is_granted("PRODUCT_DELETE")
+#      security: is_granted("PHOTO_DELETE")
 #      security_message: 'Wrong Permissions, You can not delete this Photo'
 
-    like:
+    interact:
       method: POST
-      path: /photos/{id}/like
-      controller: App\Api\Action\Photo\Like
+      path: /photos/{id}/interact
+      controller: App\Api\Action\Photo\Interact
       deserialize: false
       openapi_context:
-        summary: Likes a Photo
+        summary: Like/Dislike a Photo
         requestBody:
           content:
             application/json:

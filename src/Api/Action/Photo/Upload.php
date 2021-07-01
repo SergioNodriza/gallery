@@ -27,7 +27,7 @@ class Upload
             $archive = $requestArray['archive'];
             $description = $requestArray['description'];
             $private = $requestArray['private'];
-            $userIri = $requestArray['user'];
+            $userIri = $requestArray['owner'];
         } catch (Exception $exception) {
             throw new BadRequestHttpException('Wrong Body Format');
         }

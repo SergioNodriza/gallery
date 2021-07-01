@@ -11,6 +11,7 @@ use Symfony\Component\Uid\Uuid;
 /**
  * @ORM\Entity(repositoryClass=GroupRepository::class)
  * @ORM\Table(name="`group`")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Group
 {
@@ -36,22 +37,29 @@ class Group
     private User $owner;
 
     /**
+     * @ORM\Column(type="integer")
+     */
+    private int $numPhotos = 0;
+
+    /**
      * @ORM\ManyToMany(targetEntity=Photo::class, inversedBy="groups2")
      */
     private Collection $photos;
 
-    public function __construct()
+    public function __construct($name, $owner)
     {
         $this->id = Uuid::v4()->toRfc4122();
+        $this->name = $name;
+        $this->owner = $owner;
         $this->photos = new ArrayCollection();
     }
 
-    public function getId(): ?int
+    public function getId(): string
     {
         return $this->id;
     }
 
-    public function getName(): ?string
+    public function getName(): string
     {
         return $this->name;
     }
@@ -63,7 +71,7 @@ class Group
         return $this;
     }
 
-    public function getOwner(): ?User
+    public function getOwner(): User
     {
         return $this->owner;
     }
@@ -73,6 +81,11 @@ class Group
         $this->owner = $owner;
 
         return $this;
+    }
+
+    public function getNumPhotos(): int
+    {
+        return $this->numPhotos;
     }
 
     /**
@@ -87,6 +100,7 @@ class Group
     {
         if (!$this->photos->contains($photo)) {
             $this->photos[] = $photo;
+            ++$this->numPhotos;
         }
 
         return $this;
@@ -94,7 +108,10 @@ class Group
 
     public function removePhoto(Photo $photo): self
     {
-        $this->photos->removeElement($photo);
+        if ($this->photos->contains($photo)) {
+            $this->photos->removeElement($photo);
+            --$this->numPhotos;
+        }
 
         return $this;
     }

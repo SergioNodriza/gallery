@@ -62,12 +62,12 @@ class Photo
      */
     private Collection $groups;
 
-    public function __construct($archive, $description, $private, $user) {
+    public function __construct($archive, $description, $private, $owner) {
         $this->id = Uuid::v4()->toRfc4122();
         $this->archive = $archive;
         $this->description = $description;
         $this->private = $private;
-        $this->owner = $user;
+        $this->owner = $owner;
         $this->groups = new ArrayCollection();
     }
 
@@ -106,27 +106,6 @@ class Photo
         return $this->likes;
     }
 
-    public function setLikes(int $likes): self
-    {
-        $this->likes = $likes;
-
-        return $this;
-    }
-
-    public function addLike(): self
-    {
-        ++$this->likes;
-
-        return $this;
-    }
-
-    public function removeLike(): self
-    {
-        --$this->likes;
-
-        return $this;
-    }
-
     public function getPrivate(): bool
     {
         return $this->private;
@@ -148,11 +127,11 @@ class Photo
     }
 
     /**
-     * @param User $user
+     * @param User $owner
      */
-    public function setOwner(User $user): void
+    public function setOwner(User $owner): void
     {
-        $this->owner = $user;
+        $this->owner = $owner;
     }
 
     public function getUsersLiked(): array
@@ -172,13 +151,16 @@ class Photo
         if (in_array($user, $this->usersLiked, true)) {
             return;
         }
+
         $this->usersLiked[] = $user;
+        ++$this->likes;
     }
 
     public function removeUsersLiked(string $user): void
     {
         if (($key = array_search($user, $this->usersLiked, true)) !== false) {
             unset($this->usersLiked[$key]);
+            --$this->likes;
         }
     }
 

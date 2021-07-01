@@ -5,16 +5,16 @@ namespace App\Api\Action\Photo;
 
 
 use App\Entity\Photo;
-use App\Service\Photo\PhotoLikeService;
+use App\Service\Photo\PhotoInteractService;
 use Exception;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 
-class Like
+class Interact
 {
-    private PhotoLikeService $photoLikeService;
+    private PhotoInteractService $photoLikeService;
 
-    public function __construct(PhotoLikeService $photoLikeService)
+    public function __construct(PhotoInteractService $photoLikeService)
     {
         $this->photoLikeService = $photoLikeService;
     }
