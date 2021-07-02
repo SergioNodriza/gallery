@@ -8,43 +8,45 @@ App\Entity\Photo:
 
     get:
       method: GET
-#      security: is_granted("USER_READ")
-#      security_message: 'Wrong Permissions, You can not get the Users'
+      security: is_granted("USER_READ")
+      security_message: 'Wrong Permissions, You can not get the Photos'
 
-    register:
+    upload:
       method: POST
       path: /photos/upload
       controller: App\Api\Action\Photo\Upload
       denormalization_context:
         groups: [ photo_create ]
-#      security_post_denormalize: is_granted("PHOTO_UPLOAD", object)
-#      security_post_denormalize_message: 'Wrong Permissions, You can not create a Photo'
+      security_post_denormalize: is_granted("PHOTO_UPLOAD", object)
+      security_post_denormalize_message: 'Wrong Permissions, You can not upload a Photo'
       openapi_context:
         summary: Upload a new Photo
 
   itemOperations:
     get:
       method: GET
-#      security: is_granted("PHOTO_READ")
-#      security_message: 'Wrong Permissions, You can not get this Photo'
+      security: is_granted("PHOTO_READ")
+      security_message: 'Wrong Permissions, You can not get this Photo'
 
     put:
       method: PUT
-#        security: is_granted("PHOTO_UPDATE")
-#        security_message: 'Wrong Permissions, You can not update this Photo'
+        security: is_granted("PHOTO_UPDATE")
+        security_message: 'Wrong Permissions, You can not update this Photo'
       denormalization_context:
         groups: [ photo_update ]
 
     delete:
       method: DELETE
-#      security: is_granted("PHOTO_DELETE")
-#      security_message: 'Wrong Permissions, You can not delete this Photo'
+      security: is_granted("PHOTO_DELETE")
+      security_message: 'Wrong Permissions, You can not delete this Photo'
 
     interact:
       method: POST
       path: /photos/{id}/interact
       controller: App\Api\Action\Photo\Interact
       deserialize: false
+      security: is_granted("PHOTO_INTERACT")
+      security_message: 'Wrong Permissions, You can not interact with this Photo'
       openapi_context:
         summary: Like/Dislike a Photo
         requestBody:
@@ -53,35 +55,19 @@ App\Entity\Photo:
               schema:
                 type: object
                 properties:
-                  value:
-                    type: string
                   user:
                     type: string
-              examples:
-                Like:
-                  value:
-                    value: like
-                    name: User IRI
-                Dislike:
-                  value:
-                    value: dislike
-                    name: User IRI
+              example:
+                  user: User IRI
         responses:
           200:
             description: Result
             content:
-              text/plain:
+              application/json:
                 schema:
-                  type: string
-                examples:
-                  Liked:
-                    value: Liked
-                  Disliked:
-                    value: Disliked
-                  Already Liked:
-                    value: Already Liked
-                  Already Disliked:
-                    value: Already Disliked
+                  type: object
+                example:
+                  newLikes: 23
   properties:
     owner:
       subresource:

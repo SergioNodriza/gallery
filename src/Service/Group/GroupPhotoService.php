@@ -30,34 +30,18 @@ class GroupPhotoService
         $this->photoRepository = $photoRepository;
     }
 
-    public function addPhoto($id, $value, $photoIri): string
+    public function addPhoto($id, $photoIri): array
     {
         $group = $this->groupRepository->findOneBy(['id' => $id]);
         $photo = $this->photoRepository->findOneBy(['id' => substr($photoIri, 11)]);
         $added = in_array($photo, $group->getPhotos()->toArray(), true);
 
-        switch ($value) {
-            case self::Add:
-
-                if ($added === false) {
-                    $group->addPhoto($photo);
-                    $result = self::Added;
-                } else {
-                    $result = self::AlreadyAdded;
-                }
-                break;
-
-            case self::Remove:
-
-                if ($added === true) {
-                    $group->removePhoto($photo);
-                    $result = self::Removed;
-                } else {
-                    $result = self::NotInGroup;
-                }
-                break;
-            default:
-                throw GroupException::fromRequestBodyFormat();
+        if ($added) {
+            $group->removePhoto($photo);
+            $result = self::Removed;
+        } else {
+            $group->addPhoto($photo);
+            $result = self::Added;
         }
 
         try {
@@ -67,6 +51,6 @@ class GroupPhotoService
             throw GroupException::fromAddPhoto();
         }
 
-        return $result;
+        return ['result' => $result];
     }
 }

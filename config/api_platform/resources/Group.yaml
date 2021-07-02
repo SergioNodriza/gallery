@@ -8,8 +8,8 @@ App\Entity\Group:
 
     get:
       method: GET
-#      security: is_granted("GROUP_READ")
-#      security_message: 'Wrong Permissions, You can not get the Groups'
+      security: is_granted("GROUP_READ")
+      security_message: 'Wrong Permissions, You can not get the Groups'
 
     create:
       method: POST
@@ -17,35 +17,35 @@ App\Entity\Group:
       controller: App\Api\Action\Group\Create
       denormalization_context:
         groups: [ group_create ]
-      #      security_post_denormalize: is_granted("GROUP_CREATE", object)
-      #      security_post_denormalize_message: 'Wrong Permissions, You can not create a Group'
+      security_post_denormalize: is_granted("GROUP_CREATE", object)
+      security_post_denormalize_message: 'Wrong Permissions, You can not create a Group'
       openapi_context:
         summary: Create a new Group
 
   itemOperations:
     get:
       method: GET
-#      security: is_granted("GROUP_READ")
-#      security_message: 'Wrong Permissions, You can not get this Group'
+      security: is_granted("GROUP_READ")
+      security_message: 'Wrong Permissions, You can not get this Group'
 
     put:
       method: PUT
-#        security: is_granted("GROUP_UPDATE")
-#        security_message: 'Wrong Permissions, You can not update this Group'
+      security: is_granted("GROUP_UPDATE")
+      security_message: 'Wrong Permissions, You can not update this Group'
       denormalization_context:
         groups: [ group_update ]
 
     delete:
       method: DELETE
-#      security: is_granted("GROUP_DELETE")
-#      security_message: 'Wrong Permissions, You can not delete this Group'
+      security: is_granted("GROUP_DELETE")
+      security_message: 'Wrong Permissions, You can not delete this Group'
 
     photo:
       method: POST
       path: /groups/{id}/photo
       controller: App\Api\Action\Group\Photo
-      #      security_post_denormalize: is_granted("GROUP_ADD_PHOTO", object)
-      #      security_post_denormalize_message: 'Wrong Permissions, You can not add a Photo'
+      security_post_denormalize: is_granted("GROUP_ADD_PHOTO", object)
+      security_post_denormalize_message: 'Wrong Permissions, You can not add a Photo'
       openapi_context:
         summary: Add/Remove a Photo to a Group
         requestBody:
@@ -54,35 +54,24 @@ App\Entity\Group:
               schema:
                 type: object
                 properties:
-                  value:
-                    type: string
                   photo:
                     type: string
-              examples:
-                Add:
-                  value:
-                    value: add
-                    name: Photo IRI
-                Remove:
-                  value:
-                    value: remove
-                    name: Photo IRI
+              example:
+                photo: Photo IRI
         responses:
           '200':
             description: OK
             content:
-              text/plain:
+              application/json:
                 schema:
-                  type: string
+                  type: object
                 examples:
                   Added:
-                    value: Added
+                    value:
+                      result: Added
                   Removed:
-                    value: Removed
-                  Already Added:
-                    value: Already Added
-                  Already Removed:
-                    value: Already Removed
+                    value:
+                      result: Removed
 
   properties:
     photos:

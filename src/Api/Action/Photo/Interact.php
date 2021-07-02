@@ -21,13 +21,12 @@ class Interact
     public function __invoke(Request $request, string $id): JsonResponse
     {
         try {
-            $value = $request->toArray()['value'];
             $userIri = $request->toArray()['user'];
         } catch (Exception $exception) {
             throw new BadRequestHttpException('Wrong Body Format');
         }
 
-        $result = $this->photoLikeService->like($value, $id, $userIri);
-        return new JsonResponse($result, 200, [], true);
+        $result = $this->photoLikeService->like($id, $userIri);
+        return new JsonResponse($result, 200);
     }
 }

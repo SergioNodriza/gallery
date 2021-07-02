@@ -51,16 +51,6 @@ security:
             methods: [GET]
             security: false
 
-        getGroups:
-            pattern: ^/api/groups
-            methods: [ GET ]
-            security: false
-
-        getGroup:
-            pattern: ^/api/groups/.*
-            methods: [ GET ]
-            security: false
-
         api:
             pattern: ^/api
             stateless: true

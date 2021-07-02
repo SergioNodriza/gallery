@@ -16,9 +16,4 @@ class PhotoException extends BadRequestException
     {
         throw new self('Error on like to the photo');
     }
-
-    public static function fromRequestBodyFormat(): self
-    {
-        throw new self('Wrong Request Body Value');
-    }
 }

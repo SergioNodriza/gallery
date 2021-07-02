@@ -83,6 +83,11 @@ class Group
         return $this;
     }
 
+    public function isOwnedBy(User $user): bool
+    {
+        return $this->owner->getId() === $user->getId();
+    }
+
     public function getNumPhotos(): int
     {
         return $this->numPhotos;

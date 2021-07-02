@@ -23,13 +23,12 @@ class Photo
     public function __invoke(Request $request, string $id): JsonResponse
     {
         try {
-            $value = $request->toArray()['value'];
             $photoIri = $request->toArray()['photo'];
         } catch (Exception $exception) {
             throw new BadRequestHttpException('Wrong Body Format');
         }
 
-        $result = $this->groupAddPhotoService->addPhoto($id, $value, $photoIri);
-        return new JsonResponse($result, 200, [], true);
+        $result = $this->groupAddPhotoService->addPhoto($id, $photoIri);
+        return new JsonResponse($result, 200);
     }
 }
