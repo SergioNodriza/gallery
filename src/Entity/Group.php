@@ -42,7 +42,7 @@ class Group
     private int $numPhotos = 0;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Photo::class, inversedBy="groups2")
+     * @ORM\ManyToMany(targetEntity=Photo::class, inversedBy="groups")
      */
     private Collection $photos;
 
