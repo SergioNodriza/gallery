@@ -56,8 +56,8 @@ App\Entity\User:
 
     put:
       method: PUT
-        security: is_granted("USER_UPDATE")
-        security_message: 'Wrong Permissions, You can not update this User'
+      security: is_granted("USER_UPDATE")
+      security_message: 'Wrong Permissions, You can not update this User'
       denormalization_context:
         groups: [ user_update ]
 

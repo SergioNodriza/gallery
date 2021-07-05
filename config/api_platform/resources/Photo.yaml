@@ -30,8 +30,8 @@ App\Entity\Photo:
 
     put:
       method: PUT
-        security: is_granted("PHOTO_UPDATE")
-        security_message: 'Wrong Permissions, You can not update this Photo'
+      security: is_granted("PHOTO_UPDATE")
+      security_message: 'Wrong Permissions, You can not update this Photo'
       denormalization_context:
         groups: [ photo_update ]
 
