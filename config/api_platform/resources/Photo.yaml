@@ -3,13 +3,12 @@ App\Entity\Photo:
   attributes:
     normalization_context:
       groups: [photo_read]
+    filters:
+      - app.custom.boolean_filter.photos
 
   collectionOperations:
 
-    get:
-      method: GET
-      security: is_granted("USER_READ")
-      security_message: 'Wrong Permissions, You can not get the Photos'
+    get: ~
 
     upload:
       method: POST
@@ -23,21 +22,18 @@ App\Entity\Photo:
         summary: Upload a new Photo
 
   itemOperations:
-    get:
-      method: GET
-      security: is_granted("PHOTO_READ")
-      security_message: 'Wrong Permissions, You can not get this Photo'
+    get: ~
 
     put:
       method: PUT
-      security: is_granted("PHOTO_UPDATE")
+      security: is_granted("PHOTO_UPDATE", object)
       security_message: 'Wrong Permissions, You can not update this Photo'
       denormalization_context:
         groups: [ photo_update ]
 
     delete:
       method: DELETE
-      security: is_granted("PHOTO_DELETE")
+      security: is_granted("PHOTO_DELETE", object)
       security_message: 'Wrong Permissions, You can not delete this Photo'
 
     interact:

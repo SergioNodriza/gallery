@@ -7,8 +7,9 @@ use App\Entity\Photo;
 use App\Service\Roles\RolesService;
 use Exception;
 use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
+use Symfony\Component\Security\Core\Authorization\Voter\Voter;
 
-class PhotoVoter
+class PhotoVoter extends Voter
 {
     public const PHOTO_READ = 'PHOTO_READ';
     public const PHOTO_UPLOAD = 'PHOTO_UPLOAD';
@@ -39,12 +40,17 @@ class PhotoVoter
         $roles = $token->getRoleNames();
         $permissions = $this->rolesService->checkPermissions($roles);
 
-//        if(in_array($attribute, [self::PHOTO_READ, self::PHOTO_UPDATE, self::PHOTO_DELETE, self::PHOTO_ADD_PHOTO], true)) {
-//            return $subject->isOwnedBy($token->getUser());
-//        }
-
         try {
-            return in_array($attribute, $permissions['photo'], true);
+            if(in_array($attribute, $permissions['photo'], true)) {
+
+                if (in_array($attribute, [self::PHOTO_UPDATE, self::PHOTO_DELETE], true)) {
+                    return $subject->isOwnedBy($token->getUser());
+                }
+
+                return true;
+            }
+
+            return false;
         }  catch (Exception $exception) {
             return false;
         }

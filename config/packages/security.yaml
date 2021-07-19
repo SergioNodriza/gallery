@@ -33,12 +33,12 @@ security:
 
         getUsers:
             pattern: ^/api/users
-            methods: [ GET ]
+            methods: [GET]
             security: false
 
         getUser:
             pattern: ^/api/users/.*
-            methods: [ GET ]
+            methods: [GET]
             security: false
 
         getPhotos:

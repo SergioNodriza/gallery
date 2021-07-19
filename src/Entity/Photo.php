@@ -134,6 +134,11 @@ class Photo
         $this->owner = $owner;
     }
 
+    public function isOwnedBy(User $user): bool
+    {
+        return $this->owner->getId() === $user->getId();
+    }
+
     public function getUsersLiked(): array
     {
         return $this->usersLiked;

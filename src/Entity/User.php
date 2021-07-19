@@ -47,7 +47,7 @@ class User implements UserInterface
     /**
      * @ORM\Column(type="array")
      */
-    private array $roles = ['ROLE_USER'];
+    private array $roles = ['ROLE_BASIC'];
 
     /**
      * @ORM\OneToMany(targetEntity=Photo::class, mappedBy="owner", orphanRemoval=true)
@@ -195,5 +195,10 @@ class User implements UserInterface
         $this->groups->removeElement($group);
 
         return $this;
+    }
+
+    public function equals(User $user): bool
+    {
+        return $this->id === $user->getId();
     }
 }

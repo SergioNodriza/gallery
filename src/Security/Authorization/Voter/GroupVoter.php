@@ -40,12 +40,11 @@ class GroupVoter extends Voter
         $roles = $token->getRoleNames();
         $permissions = $this->rolesService->checkPermissions($roles);
 
-//        if(in_array($attribute, [self::GROUP_READ, self::GROUP_UPDATE, self::GROUP_DELETE, self::GROUP_ADD_PHOTO], true)) {
-//            return $subject->isOwnedBy($token->getUser());
-//        }
-
         try {
-            return in_array($attribute, $permissions['group'], true);
+            if (in_array($attribute, $permissions['group'], true)) {
+                return $subject->isOwnedBy($token->getUser());
+            }
+            return false;
         }  catch (Exception $exception) {
             return false;
         }

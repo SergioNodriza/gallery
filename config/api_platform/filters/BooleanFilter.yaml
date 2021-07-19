@@ -1,0 +1,10 @@
+services:
+  app.custom.boolean_filter.photos:
+    parent: 'api_platform.doctrine.orm.boolean_filter'
+    arguments:
+      -
+        private: ~
+    tags:
+      - { name: 'api_platform.filter', id: 'app.custom.boolean_filter.photos' }
+    autowire: false
+    autoconfigure: false

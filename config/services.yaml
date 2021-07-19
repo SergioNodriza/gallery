@@ -1,5 +1,8 @@
 parameters:
 
+imports:
+    - { resource: api_platform/filters/BooleanFilter.yaml }
+
 services:
     _defaults:
         autowire: true

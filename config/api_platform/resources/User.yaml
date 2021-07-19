@@ -6,10 +6,7 @@ App\Entity\User:
 
   collectionOperations:
 
-    get:
-      method: GET
-      security: is_granted("USER_READ")
-      security_message: 'Wrong Permissions, You can not get the Users'
+    get: ~
 
     register:
       method: POST
@@ -49,14 +46,11 @@ App\Entity\User:
                       type: string
 
   itemOperations:
-    get:
-      method: GET
-      security: is_granted("USER_READ")
-      security_message: 'Wrong Permissions, You can not get an User'
+    get: ~
 
     put:
       method: PUT
-      security: is_granted("USER_UPDATE")
+      security: is_granted("USER_UPDATE", object)
       security_message: 'Wrong Permissions, You can not update this User'
       denormalization_context:
         groups: [ user_update ]
