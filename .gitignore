@@ -1,4 +1,3 @@
-
 .idea
 
 ###> symfony/framework-bundle ###
@@ -20,6 +19,9 @@
 /phpunit.xml
 .phpunit.result.cache
 ###< phpunit/phpunit ###
+###> friends-of-behat/symfony-extension ###
+#/behat.yml
+###< friends-of-behat/symfony-extension ###
 
 ###> lexik/jwt-authentication-bundle ###
 /config/jwt/*.pem
