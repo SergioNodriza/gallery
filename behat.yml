@@ -1,0 +1,29 @@
+default:
+    suites:
+
+        resetDB:
+            paths:
+                - tests/features/ResetDataBase.feature
+            contexts:
+                - App\Tests\Behat\DataBaseContext
+                - App\Tests\Behat\KernelContext
+
+        users:
+            paths:
+                - tests/features/User
+                - tests/features/ResetDataBase.feature
+            contexts:
+                - App\Tests\Behat\User\CheckUserResponses
+                - App\Tests\Behat\RequestContext
+                - App\Tests\Behat\DataBaseContext
+                - App\Tests\Behat\KernelContext
+    extensions:
+        FriendsOfBehat\SymfonyExtension:
+            kernel:
+                class: App\Kernel
+                environment: "test"
+            bootstrap: 'config/behat/bootstrap.php'
+        Behat\MinkExtension:
+            sessions:
+                symfony:
+                    symfony: ~
