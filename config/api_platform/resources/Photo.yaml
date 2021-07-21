@@ -14,8 +14,8 @@ App\Entity\Photo:
       method: POST
       path: /photos/upload
       controller: App\Api\Action\Photo\Upload
-#      security_post_denormalize: is_granted("PHOTO_UPLOAD", object)
-#      security_post_denormalize_message: 'Wrong Permissions, You can not upload a Photo'
+      security_post_denormalize: is_granted("PHOTO_UPLOAD", object)
+      security_post_denormalize_message: 'Wrong Permissions, You can not upload a Photo'
       deserialize: false
       openapi_context:
         summary: Upload a new Photo

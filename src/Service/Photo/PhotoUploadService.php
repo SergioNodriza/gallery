@@ -26,7 +26,7 @@ class PhotoUploadService extends AbstractController
 
     public function upload(UploadedFile $file, string $fileName, string $description, bool $private, string $userIri): Photo
     {
-        $newFileName = $fileName . '.' . $file->guessExtension();
+        $newFileName = $fileName . '_' . sha1(uniqid('', false)) . '.' . $file->guessExtension();
         $destination = $this->getParameter('kernel.project_dir').'/public/uploads';
         $file->move($destination, $newFileName);
 

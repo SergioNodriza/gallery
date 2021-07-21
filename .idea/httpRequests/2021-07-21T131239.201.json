@@ -1,0 +1,15 @@
+{
+  "@context": "\/api\/contexts\/Photo",
+  "@id": "\/api\/photos\/3ed33ce8-b88a-4ff6-84d5-2fc7456d94d6",
+  "@type": "Photo",
+  "id": "3ed33ce8-b88a-4ff6-84d5-2fc7456d94d6",
+  "archive": "image1_ec47f6a3ebdaafde8928b404eba7b354de5ac2a6.png",
+  "description": "bbb",
+  "likes": 0,
+  "private": true,
+  "owner": "\/api\/users\/b01ed1ed-9f06-4f11-9205-11cbf3219934",
+  "usersLiked": [],
+  "groups": [],
+  "createdAt": "2021-07-21T11:12:39+00:00",
+  "updatedAt": "2021-07-21T11:12:39+00:00"
+}
