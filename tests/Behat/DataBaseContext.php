@@ -33,7 +33,7 @@ class DataBaseContext implements Context
     }
 
     /**
-     * @AfterScenario @TRANSFER,@REMOVE,@REGISTER,@DELETE
+     * @AfterScenario @REGISTER-DUPLICITY,@DELETE
      */
     public function fixturesDBApi(): void
     {

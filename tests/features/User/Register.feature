@@ -4,7 +4,7 @@ Feature: POST /users/register
   I need to check the response
 
   @USER @USER-REGISTER @REGISTER
-  Scenario: Post
+  Scenario: Post Register
     When I do a "POST" to "users/register"
     """
       {
@@ -13,17 +13,18 @@ Feature: POST /users/register
         "password": "User@01"
       }
     """
-    Then I should check the Register Response
+    Then I should get 201
+    And I should check the Register Response
 
 
-#  @USER @USER-REGISTER @REGISTER-DUPLICITY
-#  Scenario: Post Duplicity
-#    When I do a "POST" to "users/register"
-#    """
-#      {
-#        "name": "User",
-#        "email": "user@email.com",
-#        "password": "User@01"
-#      }
-#    """
-#    Then I should get 400
+  @USER @USER-REGISTER @REGISTER-DUPLICITY
+  Scenario: Post Duplicity
+    When I do a "POST" to "users/register"
+    """
+      {
+        "name": "User",
+        "email": "user@email.com",
+        "password": "User@01"
+      }
+    """
+    Then I should get 409

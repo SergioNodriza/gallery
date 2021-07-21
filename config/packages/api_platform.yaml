@@ -7,7 +7,7 @@ api_platform:
     swagger:
         versions: [3]
         api_keys:
-            apiKey:
+            header:
                 name: Authorization
                 type: header
     title: Gallery API

@@ -4,13 +4,15 @@ parameters: # password
 App\Entity\User:
   User-0:
     __construct:
-      name: Peter
-      email: peter@api.com
+      name: UserPremium
+      email: user@premium.com
+      id: 113ac47c-73ff-4f51-b4b9-ccaee1e3c3d4
     password: <{testing_password_hash}>
-    roles: [ ROLE_ADMIN ]
+    roles: [ ROLE_PREMIUM ]
   User-1:
     __construct:
-      name: Brian
-      email: brian@api.com
+      name: UserBasic
+      email: user@basic.com
+      id: 87c63d28-a358-4f7f-b456-edaa097a2c68
     password: <{testing_password_hash}>
-    roles: [ ROLE_USER ]
+    roles: [ ROLE_BASIC ]

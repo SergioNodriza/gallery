@@ -9,9 +9,11 @@ use App\Exceptions\Photo\PhotoException;
 use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Exception;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
 
-class PhotoUploadService
+class PhotoUploadService extends AbstractController
 {
     private EntityManagerInterface $entityManager;
     private UserRepository $userRepository;
@@ -22,10 +24,14 @@ class PhotoUploadService
         $this->userRepository = $userRepository;
     }
 
-    public function upload($archive, string $description, bool $private, string $userIri): Photo
+    public function upload(UploadedFile $file, string $fileName, string $description, bool $private, string $userIri): Photo
     {
+        $newFileName = $fileName . '.' . $file->guessExtension();
+        $destination = $this->getParameter('kernel.project_dir').'/public/uploads';
+        $file->move($destination, $newFileName);
+
         $user = $this->userRepository->findOneBy(['id' => substr($userIri, 11)]);
-        $photo = new Photo($archive, $description, $private, $user);
+        $photo = new Photo($newFileName, $description, $private, $user);
 
         try {
 

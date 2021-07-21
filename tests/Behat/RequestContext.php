@@ -19,7 +19,6 @@ class RequestContext implements Context
 {
 
     private KernelContext $kernelContext;
-    private array $jwts = [];
     private array $serverParameters;
 
     private UserRepository $repository;
@@ -57,15 +56,13 @@ class RequestContext implements Context
      * @return Response
      * @throws Exception
      */
-    public function doRequest(string $method, string $endpoint, ?PyStringNode $payload = null, ?string $userID = null): Response
+    public function doRequest(string $method, string $endpoint, ?string $userID = null, ?PyStringNode $payload = null): Response
     {
         $url = "http://localhost:250/api/$endpoint";
 
         if ($userID) {
             $this->serverParameters += [
-                'HTTP_Authorization' => [
-                    sprintf('Bearer %s', $this->getUserJWT($userID))
-                ]
+                'HTTP_Authorization' => sprintf('Bearer %s', $this->getUserJWT($userID))
             ];
         }
 
@@ -78,9 +75,7 @@ class RequestContext implements Context
             $this->client->request($method, $url);
         }
 
-
         $this->printDebug($url);
-
 
         $this->response = $this->client->getResponse();
         return $this->response;
@@ -89,17 +84,10 @@ class RequestContext implements Context
     /**
      * @throws Exception
      */
-    public function getUserJWT($user_uuid, $force_recreate = false): ?string
+    public function getUserJWT($user_uuid): string
     {
-        if ($force_recreate || !isset($this->jwts[$user_uuid])) {
-
-            $user = $this->repository->findOneBy(['id' => $user_uuid]);
-
-            $this->jwts[$user_uuid] = str_replace("\n", '',
-                $this->kernelContext->runCLICommand('lexik:jwt:generate-token ', ['username' => $user->getUsername()]));
-        }
-
-        return $this->jwts[$user_uuid] ?? null;
+        $user = $this->repository->findOneBy(['id' => $user_uuid]);
+        return str_replace("\n", '', $this->kernelContext->runCLICommand('lexik:jwt:generate-token', ['username' => $user->getUsername()]));
     }
 
     /**
@@ -138,5 +126,7 @@ class RequestContext implements Context
         if (!$url) {
             echo current($this->getLastResponse()->headers->all()['x-debug-token-link'] ?? ['Sin X-Debug']);
         }
+
+        echo $url;
     }
 }

@@ -60,8 +60,14 @@ class User implements UserInterface
     private Collection $groups;
 
 
-    public function __construct(string $name, $email) {
-        $this->id = Uuid::v4()->toRfc4122();
+    public function __construct(string $name, $email, $id = null) {
+
+        if ($id) {
+            $this->id = $id;
+        } else {
+            $this->id = Uuid::v4()->toRfc4122();
+        }
+
         $this->name = $name;
         $this->email = $email;
         $this->photos = new ArrayCollection();

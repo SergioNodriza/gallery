@@ -2,15 +2,31 @@
 #################################### Photos #########################################
 
 POST http://localhost:250/api/photos/upload
-Content-Type: application/json
-Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY2OTI0ODUsImV4cCI6MTYzMTg3NjQ4NSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.YfXq5Nvn9ySjiBaCcOTDPPXQVWwSqZHO5RaYqHhRqYAOL-84WZZSqM-lsvmERm8hx2VPVOx4U7ElM9445i26R-Bxy_1Lz56oMO_KcdbTyAYhsGC9b0L76IOseLWaGKlDp2elIf-nYf52fXJ43jfXxZFxxUSG3Mxo16dlnMMsq-10lWlubmRYeK9SSEA2dMlx_exAkDHTJ1_5gdc5Cg4_-k7gYSV5dAeRPOq-71dN5E9opmia6cmq82ZQtQm3fMZD1QyvNMckn5QrCjPA8viWLXmG7_pFGswbow_IlnXk0vINAOYpFmWU9XfyM0u4VffB_ueO664mL6H4PLsjEB1oTWiSXchciAXWfpcL7KJZzWzXCFMV4sACGDHlphEzXPkiD3d1mjuJsaE1r94QENb8enas7yjwcEqYdphdEEMZesglzFCCF4YMbHdZIs87EJ29JkeYhs8YQEwiBcx3NteEZDF4PnQw_LA9wq3mhGK_xr6wC9BS4NEalOmBbMz8aFWwEEGYI3dDtg3s_KDuQGOn7O1b9VHyOBAP3yQ50twWzPXjsdbA478wf1GQPbceq34AsBo8-GwoppQZXDVYeVIpjV5ZK_PVqv5pIAjsIJGQvpVenVm2CzXBRLxavBTpkB0vsoTJ6CvLbCJKhmXnyXwiSSC1vlA1wVoAojqdUPa-nes
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
 
-{
-  "archive": "ruta",
-  "description": "bbb",
-  "private": false,
-  "owner": "/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934"
-}
+--boundary
+Content-Disposition: form-data; name="archive"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< fixtures/image1.png
+
+--boundary
+Content-Disposition: form-data; name="description"
+
+bbb
+
+--boundary
+Content-Disposition: form-data; name="private"
+
+false
+
+--boundary
+Content-Disposition: form-data; name="owner"
+
+/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934
+
+--boundary--
 
 ####################
 

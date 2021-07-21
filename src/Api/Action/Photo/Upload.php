@@ -21,17 +21,18 @@ class Upload
 
     public function __invoke(Request $request): Photo
     {
-        $requestArray = $request->toArray();
-
         try {
-            $archive = $requestArray['archive'];
-            $description = $requestArray['description'];
-            $private = $requestArray['private'];
-            $userIri = $requestArray['owner'];
+
+            $description = $request->request->get('description');
+            $private = $request->request->get('private');
+            $userIri = $request->request->get('owner');
+
+            $file = $request->files->get('archive');
+            [$fileName, ] = explode('.', $_FILES['archive']['name']);
         } catch (Exception $exception) {
             throw new BadRequestHttpException('Wrong Body Format');
         }
 
-        return $this->photoUploadService->upload($archive, $description, $private, $userIri);
+        return $this->photoUploadService->upload($file, $fileName, $description, $private, $userIri);
     }
 }

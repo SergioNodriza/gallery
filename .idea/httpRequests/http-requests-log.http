@@ -1,0 +1,917 @@
+POST http://localhost:250/api/photos/upload
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="archive"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< /home/sergio/Sites/gallery/etc/docs/Calls/Photo/fixtures/image1.png
+--boundary
+Content-Disposition: form-data; name="description"
+
+bbb
+--boundary
+Content-Disposition: form-data; name="private"
+
+false
+--boundary
+Content-Disposition: form-data; name="owner"
+
+/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934
+--boundary--
+
+<> 2021-07-21T130815.201.json
+
+###
+
+POST http://localhost:250/api/photos/upload
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="archive"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< /home/sergio/Sites/gallery/etc/docs/Calls/Photo/fixtures/image1.png
+--boundary
+Content-Disposition: form-data; name="description"
+
+bbb
+--boundary
+Content-Disposition: form-data; name="private"
+
+false
+--boundary
+Content-Disposition: form-data; name="owner"
+
+"/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934"
+--boundary--
+
+<> 2021-07-21T130801.200.html
+
+###
+
+POST http://localhost:250/api/photos/upload
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="archive"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< /home/sergio/Sites/gallery/etc/docs/Calls/Photo/fixtures/image1.png
+--boundary
+Content-Disposition: form-data; name="description"
+
+{"description": "bbb"}
+--boundary
+Content-Disposition: form-data; name="private"
+
+{"private": false}
+--boundary
+Content-Disposition: form-data; name="owner"
+
+{"owner": "/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934"}
+--boundary--
+
+<> 2021-07-21T130717.200.html
+
+###
+
+POST http://localhost:250/api/photos/upload
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="archive"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< /home/sergio/Sites/gallery/etc/docs/Calls/Photo/fixtures/image1.png
+--boundary
+Content-Disposition: form-data; name="description"
+
+{"description": "bbb"}
+--boundary
+Content-Disposition: form-data; name="private"
+
+{"private": false}
+--boundary
+Content-Disposition: form-data; name="owner"
+
+{"owner": "/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934"}
+--boundary--
+
+<> 2021-07-21T130656.500.json
+
+###
+
+POST http://localhost:250/api/photos/upload
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="archive"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< /home/sergio/Sites/gallery/etc/docs/Calls/Photo/fixtures/image1.png
+--boundary
+Content-Disposition: form-data; name="description"
+
+{"description": "bbb"}
+--boundary--
+
+<> 2021-07-21T130603.500.json
+
+###
+
+POST http://localhost:250/api/photos/upload
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="archive"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< /home/sergio/Sites/gallery/etc/docs/Calls/Photo/fixtures/image1.png
+--boundary
+Content-Disposition: form-data; name="json_string"
+
+{"description": "bbb"}
+--boundary--
+
+<> 2021-07-21T130547.200.html
+
+###
+
+POST http://localhost:250/api/photos/upload
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="archive"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< /home/sergio/Sites/gallery/etc/docs/Calls/Photo/fixtures/image1.png
+--boundary
+Content-Disposition: form-data; name="json_string"
+
+{"description": "bbb"}
+--boundary--
+
+<> 2021-07-21T130524.500.json
+
+###
+
+POST http://localhost:250/api/photos/upload
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="archive"; filename="fixtures/image1.png"
+Content-Type: application/json
+
+< /tmp/http_request_input_file.txt
+--boundary--
+
+<> 2021-07-21T130220.500.json
+
+###
+
+POST http://localhost:250/api/photos/upload
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="archive"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< /home/sergio/Sites/gallery/etc/docs/Calls/Photo/fixtures/image1.png
+--boundary
+Content-Type: application/json
+
+{
+  "description": "bbb",
+  "private": false,
+  "owner": "/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934"
+}
+--boundary--
+
+<> 2021-07-21T125525.200.html
+
+###
+
+POST http://localhost:250/api/photos/upload
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="archive"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< /home/sergio/Sites/gallery/etc/docs/Calls/Photo/fixtures/image1.png
+--boundary
+Content-Type: application/json
+
+{
+  "description": "bbb",
+  "private": false,
+  "owner": "/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934"
+}
+--boundary--
+
+<> 2021-07-21T125510.500.json
+
+###
+
+POST http://localhost:250/api/photos/upload
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="archive"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< /home/sergio/Sites/gallery/etc/docs/Calls/Photo/fixtures/image1.png
+--boundary
+Content-Type: application/json
+
+{
+  "description": "bbb",
+  "private": false,
+  "owner": "/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934"
+}
+--boundary--
+
+<> 2021-07-21T125410.200.html
+
+###
+
+POST http://localhost:250/api/photos/upload
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="archive"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< /home/sergio/Sites/gallery/etc/docs/Calls/Photo/fixtures/image1.png
+--boundary
+Content-Type: application/json
+
+{
+  "description": "bbb",
+  "private": false,
+  "owner": "/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934"
+}
+--boundary--
+
+<> 2021-07-21T125349.200.html
+
+###
+
+POST http://localhost:250/api/photos/upload
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="archive"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< /home/sergio/Sites/gallery/etc/docs/Calls/Photo/fixtures/image1.png
+--boundary
+Content-Type: application/json
+
+{
+  "description": "bbb",
+  "private": false,
+  "owner": "/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934"
+}
+--boundary--
+
+<> 2021-07-21T125339.200.html
+
+###
+
+POST http://localhost:250/api/photos/upload
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="archive"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< /home/sergio/Sites/gallery/etc/docs/Calls/Photo/fixtures/image1.png
+--boundary
+Content-Type: application/json
+
+{
+  "description": "bbb",
+  "private": false,
+  "owner": "/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934"
+}
+--boundary--
+
+<> 2021-07-21T125329.400.json
+
+###
+
+POST http://localhost:250/api/photos/upload
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="archive"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< /home/sergio/Sites/gallery/etc/docs/Calls/Photo/fixtures/image1.png
+--boundary
+Content-Type: application/json
+
+{
+  "description": "bbb",
+  "private": false,
+  "owner": "/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934"
+}
+--boundary--
+
+<> 2021-07-21T125328.400.json
+
+###
+
+POST http://localhost:250/api/photos/upload
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="archive"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< /home/sergio/Sites/gallery/etc/docs/Calls/Photo/fixtures/image1.png
+--boundary
+Content-Type: application/json
+
+{
+  "description": "bbb",
+  "private": false,
+  "owner": "/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934"
+}
+--boundary--
+
+<> 2021-07-21T125325.400.json
+
+###
+
+POST http://localhost:250/api/photos/upload
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="archive"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< /home/sergio/Sites/gallery/etc/docs/Calls/Photo/fixtures/image1.png
+--boundary
+Content-Type: application/json
+
+{
+  "description": "bbb",
+  "private": false,
+  "owner": "/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934"
+}
+--boundary--
+
+<> 2021-07-21T125313.200.html
+
+###
+
+POST http://localhost:250/api/photos/upload
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="archive"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< /home/sergio/Sites/gallery/etc/docs/Calls/Photo/fixtures/image1.png
+--boundary
+Content-Type: application/json
+
+{
+  "description": "bbb",
+  "private": false,
+  "owner": "/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934"
+}
+--boundary--
+
+<> 2021-07-21T125302.200.html
+
+###
+
+POST http://localhost:250/api/photos/upload
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="archive"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< /home/sergio/Sites/gallery/etc/docs/Calls/Photo/fixtures/image1.png
+--boundary
+Content-Type: application/json
+
+{
+  "description": "bbb",
+  "private": false,
+  "owner": "/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934"
+}
+--boundary--
+
+<> 2021-07-21T125248.400.json
+
+###
+
+POST http://localhost:250/api/photos/upload
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="archive"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< /home/sergio/Sites/gallery/etc/docs/Calls/Photo/fixtures/image1.png
+--boundary
+Content-Type: application/json
+
+{
+  "description": "bbb",
+  "private": false,
+  "owner": "/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934"
+}
+--boundary--
+
+<> 2021-07-21T125236.400.json
+
+###
+
+POST http://localhost:250/api/photos/upload
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="archive"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< /home/sergio/Sites/gallery/etc/docs/Calls/Photo/fixtures/image1.png
+--boundary
+Content-Type: application/json
+
+{
+  "description": "bbb",
+  "private": false,
+  "owner": "/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934"
+}
+--boundary--
+
+<> 2021-07-21T125235.400.json
+
+###
+
+POST http://localhost:250/api/photos/upload
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="archive"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< /home/sergio/Sites/gallery/etc/docs/Calls/Photo/fixtures/image1.png
+--boundary
+Content-Type: application/json
+
+{
+  "description": "bbb",
+  "private": false,
+  "owner": "/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934"
+}
+--boundary--
+
+<> 2021-07-21T125231.400.json
+
+###
+
+POST http://localhost:250/api/photos/upload
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="archive"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< /home/sergio/Sites/gallery/etc/docs/Calls/Photo/fixtures/image1.png
+--boundary
+Content-Type: application/json
+
+{
+  "description": "bbb",
+  "private": false,
+  "owner": "/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934"
+}
+--boundary--
+
+<> 2021-07-21T125214.400.json
+
+###
+
+POST http://localhost:250/api/photos/upload
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="archive"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< /home/sergio/Sites/gallery/etc/docs/Calls/Photo/fixtures/image1.png
+--boundary
+Content-Type: application/json
+
+{
+  "description": "bbb",
+  "private": false,
+  "owner": "/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934"
+}
+--boundary--
+
+<> 2021-07-21T123605.415.json
+
+###
+
+POST http://localhost:250/api/photos/upload
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="archive"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< /home/sergio/Sites/gallery/etc/docs/Calls/Photo/fixtures/image1.png
+--boundary
+Content-Type: application/json
+
+{
+  "description": "bbb",
+  "private": false,
+  "owner": "/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934"
+}
+--boundary--
+
+<> 2021-07-21T123328.415.json
+
+###
+
+POST http://localhost:250/api/photos/upload
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="archive"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< /home/sergio/Sites/gallery/etc/docs/Calls/Photo/fixtures/image1.png
+--boundary
+Content-Type: application/json
+
+{
+  "description": "bbb",
+  "private": false,
+  "owner": "/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934"
+}
+--boundary--
+
+<> 2021-07-21T123325.415.json
+
+###
+
+POST http://localhost:250/api/photos/upload
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="fileName"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< /home/sergio/Sites/gallery/etc/docs/Calls/Photo/fixtures/image1.png
+--boundary
+Content-Type: application/json
+
+{
+  "description": "bbb",
+  "private": false,
+  "owner": "/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934"
+}
+--boundary--
+
+<> 2021-07-21T123056.415.json
+
+###
+
+POST http://localhost:250/api/photos/upload
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="fileName"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< /home/sergio/Sites/gallery/etc/docs/Calls/Photo/fixtures/image1.png
+--boundary--
+
+<> 2021-07-21T122801.415.json
+
+###
+
+POST http://localhost:250/api/photos/upload
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="fileName"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< /home/sergio/Sites/gallery/etc/docs/Calls/Photo/fixtures/image1.png
+--boundary--
+
+<> 2021-07-21T122750.415.json
+
+###
+
+GET http://localhost:250/api/users
+
+<> 2021-07-21T122707.200.json
+
+###
+
+POST http://localhost:250/api/photos/upload
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="fileName"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< /home/sergio/Sites/gallery/etc/docs/Calls/Photo/fixtures/image1.png
+--boundary
+Content-Type: application/json
+
+{
+  "archive": "ruta",
+  "description": "bbb",
+  "private": false,
+  "owner": "/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934"
+}
+--boundary--
+
+<> 2021-07-21T122607.415.json
+
+###
+
+POST http://localhost:250/api/photos/upload
+Content-Type: multipart/form-data; boundary=boundary
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+
+--boundary
+Content-Disposition: form-data; name="fileName"; filename="fixtures/image1.png"
+Content-Type: image/png
+
+< /home/sergio/Sites/gallery/etc/docs/Calls/Photo/fixtures/image1.png
+--boundary
+Content-Type: application/json
+
+{
+  "archive": "ruta",
+  "description": "bbb",
+  "private": false,
+  "owner": "/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934"
+}
+--boundary--
+
+<> 2021-07-21T122330.415.json
+
+###
+
+PUT http://localhost:250/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+
+{
+  "name": "updated"
+}
+
+<> 2021-07-21T121830.200.json
+
+###
+
+GET http://localhost:250/api/users/login_check
+Content-Type: application/json
+
+{
+  "username": "user@email.com",
+  "password": "User@01"
+}
+
+<> 2021-07-21T121527.200.json
+
+###
+
+PUT http://localhost:250/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+
+{
+  "name": "updated"
+}
+
+<> 2021-07-21T114124.200.json
+
+###
+
+PUT http://localhost:250/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjA0MjQsImV4cCI6MTYyNjg2NDAyNCwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBwcmVtaXVtLmNvbSIsImlkIjoiMTEzYWM0N2MtNzNmZi00ZjUxLWI0YjktY2NhZWUxZTNjM2Q0IiwibmFtZSI6IlVzZXJQcmVtaXVtIn0.ZvpWZbSZQgf3ax71PE4E5UdtdzXweCoAcbOq7TNZI6Ou_jG9D42FJA1WFpnBIiuKp5GuW-pvmdXd0vrjNEux_kMjsSRnr3JKeK9ydq3zNCyvLdv2_NrphIP6Ba5998YG0D3i1DCHKv90x_KNr7Tuv0SenO1MHWlIXay4MeYPebxkQc7trPRS1sRUxHgsb5TclWsfnaR76hvvW_aFc4h6a2F4K4MlEy1u9oMupdNr_OySUJn5Mza7XyiBB-JXpVPt8iw_FD9hJp7VvwEKjSiIUUNB8l482hMk_yIKGbjOiolwF0j3wBquEHYqD6p2bT44mXmMdTmQ-308i5NX94g89Bs9g31-159CWTB7uKUhTwYrtirtlNPYqSJhoaOadnxqE-aVG5A6uxrSjDhM2IjcZ6fl5oQITfFi2A6GhzN2wpACmlfNL3nmoEG_YFlNhDDLeaKGG1YCuV3LvWW8tUlnXvK3XZg1yCyYiUoMpTZnfM405rqkW-J7KAWQnDfRU26SI68gOteGySLRAwVfees1oQM-ENJPmgitWiSHJp_73mB31h8Nzo860w504LBcroehXJj4lA9DhEfRvzckXMziS6VfzuNYJzI6gLDT-3s1k9wRTNrF2EFvpC8UHh2vOVIk69-4lGQWTmVEqPwl4501ffIIsi-SV94VBsOizP2swO0
+
+{
+  "name": "updated"
+}
+
+<> 2021-07-21T114057.500.json
+
+###
+
+PUT http://localhost:250/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjA0MjQsImV4cCI6MTYyNjg2NDAyNCwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBwcmVtaXVtLmNvbSIsImlkIjoiMTEzYWM0N2MtNzNmZi00ZjUxLWI0YjktY2NhZWUxZTNjM2Q0IiwibmFtZSI6IlVzZXJQcmVtaXVtIn0.ZvpWZbSZQgf3ax71PE4E5UdtdzXweCoAcbOq7TNZI6Ou_jG9D42FJA1WFpnBIiuKp5GuW-pvmdXd0vrjNEux_kMjsSRnr3JKeK9ydq3zNCyvLdv2_NrphIP6Ba5998YG0D3i1DCHKv90x_KNr7Tuv0SenO1MHWlIXay4MeYPebxkQc7trPRS1sRUxHgsb5TclWsfnaR76hvvW_aFc4h6a2F4K4MlEy1u9oMupdNr_OySUJn5Mza7XyiBB-JXpVPt8iw_FD9hJp7VvwEKjSiIUUNB8l482hMk_yIKGbjOiolwF0j3wBquEHYqD6p2bT44mXmMdTmQ-308i5NX94g89Bs9g31-159CWTB7uKUhTwYrtirtlNPYqSJhoaOadnxqE-aVG5A6uxrSjDhM2IjcZ6fl5oQITfFi2A6GhzN2wpACmlfNL3nmoEG_YFlNhDDLeaKGG1YCuV3LvWW8tUlnXvK3XZg1yCyYiUoMpTZnfM405rqkW-J7KAWQnDfRU26SI68gOteGySLRAwVfees1oQM-ENJPmgitWiSHJp_73mB31h8Nzo860w504LBcroehXJj4lA9DhEfRvzckXMziS6VfzuNYJzI6gLDT-3s1k9wRTNrF2EFvpC8UHh2vOVIk69-4lGQWTmVEqPwl4501ffIIsi-SV94VBsOizP2swO0
+
+{
+  "name": "updated"
+}
+
+<> 2021-07-21T114053.500.json
+
+###
+
+PUT http://localhost:250/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+
+{
+  "name": "updated"
+}
+
+<> 2021-07-21T113938.200.json
+
+###
+
+PUT http://localhost:250/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMzAsImV4cCI6MTYyNjg2MzkzMCwicm9sZXMiOlsiUk9MRV9CQVNJQyJdLCJ1c2VybmFtZSI6InVzZXJAZW1haWwyLmNvbSIsImlkIjoiZmNkNGEzZGQtODVhNS00ZjVhLTljZmItOWJlMDY3M2Y3Zjg3IiwibmFtZSI6IlVzZXIyIn0.cua3bVMHBAxiHXZTEzVwZOy3Hsv76lOHoXoUjEt9Hj5YUx4GzH2aj_nEY9aIoN8vLy8LlaRA80TKj_Ejfxh0f52MCWDejJUl4re_TY3DiT_AR7fabYmdLyp3dw5RoHyqK5EVaA2nvDx9aRk9hGRL9pDApjYAXAmyKekm_F-iCHGKWbGs2DrZ-ZUiA1IIssfsJ5NdCfHMpVy76W2bQNiHFXmhGEt-ICIHPPyEVixGMm4GfLM8CZnPV5MKuKinA8wIFud__SmbcTUV9miaNZUY_-MHm6JgXdXC8jvnNCynr6ulSMlrSvTXZrtkX1uZ3QMGTgrm3fpevcSVJIMcAopaqlXpIC1MuGU144L6980mx1zJoi_2z1L4eur9YrsNe0U0I5iaYJi5ROXkUBhiqeOW3WaH4zZK7CwsxIk2GdM-MTgkcSVmkwwpy1hwALY0Fk8VGwHrryfE47yo-V0Ld6lmlVxtbZQXNk5XYh-Vxbytv63Chl8gD_oMNBlUwNNxGAtienB3g4Mnhh-aoHa-oNxwhTGEFQE3DODq_utI5VlaK_Biq0Trv7GdpYZS1sfssIlQNsHdbL2Tv5gQf3oJ6OkV6f--TJkPeAeuvuK_LiH-J1Ts_n9si52T7aBr5f6wLXjtxjxfWtqo1JKJt5V2xZAUQw7SMX0DNcuvJr9sW6EoF0E
+
+{
+  "name": "updated"
+}
+
+<> 2021-07-21T113900.403.json
+
+###
+
+GET http://localhost:250/api/users/login_check
+Content-Type: application/json
+
+{
+  "username": "user@email2.com",
+  "password": "User@01"
+}
+
+<> 2021-07-21T113850.200.json
+
+###
+
+PUT http://localhost:250/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+
+{
+  "name": "updated"
+}
+
+<> 2021-07-21T113842.200.json
+
+###
+
+PUT http://localhost:250/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY4NjAzMDUsImV4cCI6MTYyNjg2MzkwNSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.Dxa7U1lVmAu4hAbj9ttNWZ2bgGVQCnn09dDjCKbwxgD6QNBxkSTykMUSeO4pt6PoFekxinw1vEUv6cDTjLbNkqQwAarICsy1zJ38Iruro0xXebn00NFKbU_nQBK_mapdSlc8i_cqq4SsWsCVsUH4xCEmliLl7rFAj-__045-D4zkuwFtkNVYovSXgywl6E7WSwXUD3Sb5HyKq38Z_N09vHGgFAxmaNWzR_XzKWGjmalMYNF-WLsB_8qSbQfJUuqu2XkWbGFbQ9liivoXDfKTL48r6djhsY5UzNJu0vpC63Vy0WdeEuenwO8LEYMBrTVn_HD3GPzIsAsdtp3Lqpkmx4H1hP5caI2-dRqUPfTrDrWnn-w9k21amiw_F8Y2JR3d9YHy_hpT8VoroMKsEZyG5xCFlut3GL3UyXRZLjAiRfMBbtwnl18tcxNm1dsFy-v_JQZz-YpwowOx99XZoCQd1Sf4IDzJqvqE500czhMMCiLnjvJluCgELh5poUyD7eC-ZGw1kO2QJGXnamRW2HRMto1shyLzZQZGDEXbwpTtkZiFQPwbTaIKF_gYkf-2TGLX8hDk42Xlm86vqR6U7FwGKOYs3pI2gbvCMQg4ziix-c64HWYL0dy5ICRQsyPLb52fj8zcnEKm3HuGHu3athHAVg6aT1APHWfArXkSaOmck-k
+
+{
+  "name": "updated"
+}
+
+<> 2021-07-21T113837.200.json
+
+###
+
+GET http://localhost:250/api/users/login_check
+Content-Type: application/json
+
+{
+  "username": "user@email.com",
+  "password": "User@01"
+}
+
+<> 2021-07-21T113825.200.json
+
+###
+
+GET http://localhost:250/api/users/login_check
+Content-Type: application/json
+
+{
+  "username": "user@email.com",
+  "password": "User@01"
+}
+
+<> 2021-07-21T113809.200.json
+
+###
+
+PUT http://localhost:250/api/users/b01ed1ed-9f06-4f11-9205-11cbf3219934
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY2OTI0ODUsImV4cCI6MTYzMTg3NjQ4NSwicm9sZXMiOlsiUk9MRV9QUkVNSVVNIl0sInVzZXJuYW1lIjoidXNlckBlbWFpbC5jb20iLCJpZCI6ImIwMWVkMWVkLTlmMDYtNGYxMS05MjA1LTExY2JmMzIxOTkzNCIsIm5hbWUiOiJVc2VyIn0.YfXq5Nvn9ySjiBaCcOTDPPXQVWwSqZHO5RaYqHhRqYAOL-84WZZSqM-lsvmERm8hx2VPVOx4U7ElM9445i26R-Bxy_1Lz56oMO_KcdbTyAYhsGC9b0L76IOseLWaGKlDp2elIf-nYf52fXJ43jfXxZFxxUSG3Mxo16dlnMMsq-10lWlubmRYeK9SSEA2dMlx_exAkDHTJ1_5gdc5Cg4_-k7gYSV5dAeRPOq-71dN5E9opmia6cmq82ZQtQm3fMZD1QyvNMckn5QrCjPA8viWLXmG7_pFGswbow_IlnXk0vINAOYpFmWU9XfyM0u4VffB_ueO664mL6H4PLsjEB1oTWiSXchciAXWfpcL7KJZzWzXCFMV4sACGDHlphEzXPkiD3d1mjuJsaE1r94QENb8enas7yjwcEqYdphdEEMZesglzFCCF4YMbHdZIs87EJ29JkeYhs8YQEwiBcx3NteEZDF4PnQw_LA9wq3mhGK_xr6wC9BS4NEalOmBbMz8aFWwEEGYI3dDtg3s_KDuQGOn7O1b9VHyOBAP3yQ50twWzPXjsdbA478wf1GQPbceq34AsBo8-GwoppQZXDVYeVIpjV5ZK_PVqv5pIAjsIJGQvpVenVm2CzXBRLxavBTpkB0vsoTJ6CvLbCJKhmXnyXwiSSC1vlA1wVoAojqdUPa-nes
+
+{
+  "name": "updated"
+}
+
+<> 2021-07-21T112851.200.json
+
+###
+
+GET http://localhost:250/api/users/login_check
+Content-Type: application/json
+
+{
+  "username": "user@email.com",
+  "password": "User@0"
+}
+
+<> 2021-07-21T112617.401.json
+
+###
+
+GET http://localhost:250/api/users/login_check
+Content-Type: application/json
+
+{
+  "username": "user@email.com",
+  "password": "User@01"
+}
+
+<> 2021-07-21T112602.200.json
+
+###
+
+GET http://localhost:250/api/users/login_check
+Content-Type: application/json
+
+{
+  "username": "user@email.com",
+  "password": "User@01"
+}
+
+<> 2021-07-21T112114.200.json
+
+###
+
+GET http://localhost:250/api/users/login_check
+Content-Type: application/json
+
+{
+  "username": "user@email2.com",
+  "password": "User@0"
+}
+
+<> 2021-07-21T112037.401.json
+
+###
+
+GET http://localhost:250/api/users/login_check
+Content-Type: application/json
+
+{
+  "username": "user@email2.com",
+  "password": "User@01"
+}
+
+<> 2021-07-21T112032.200.json
+
+###
+
