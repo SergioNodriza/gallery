@@ -34,8 +34,6 @@ class CheckUserResponses implements Context
      */
     public function iShouldCheckTheResponseOfTheRegister(): void
     {
-        $this->requestContext->printDebug();
-
         $response = $this->requestContext->getLastResponse();
         $responseData = $this->requestContext->getLastResponseData($response);
 
@@ -48,8 +46,6 @@ class CheckUserResponses implements Context
      */
     public function iShouldCheckTheResponseOfTheGETAllUsers(): void
     {
-        $this->requestContext->printDebug();
-
         $response = $this->requestContext->getLastResponse();
         $responseData = $this->requestContext->getLastResponseData($response);
 
@@ -66,8 +62,6 @@ class CheckUserResponses implements Context
      */
     public function iShouldCheckTheResponseOfTheGETUserById(): void
     {
-        $this->requestContext->printDebug();
-
         $response = $this->requestContext->getLastResponse();
         $responseData = $this->requestContext->getLastResponseData($response);
 
@@ -80,8 +74,6 @@ class CheckUserResponses implements Context
      */
     public function iShouldCheckTheResponseOfTheLogin(): void
     {
-        $this->requestContext->printDebug();
-
         $response = $this->requestContext->getLastResponse();
         $responseData = $this->requestContext->getLastResponseData($response);
 
@@ -94,8 +86,6 @@ class CheckUserResponses implements Context
      */
     public function iShouldCheckTheResponseOfThePUTUser(): void
     {
-        $this->requestContext->printDebug();
-
         $response = $this->requestContext->getLastResponse();
         $responseData = $this->requestContext->getLastResponseData($response);
 

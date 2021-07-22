@@ -2,19 +2,22 @@
 App\Entity\Photo:
   Photo-0:
     __construct:
-      archive: archive0
+      archive: image0
       description: description0
       private: true
       owner: '@User-0'
+      id: 41bc543a-2fff-4f05-87eb-18d229c51dbf
   Photo-1:
     __construct:
-      archive: archive1
+      archive: image1
       description: description1
       private: false
       owner: '@User-0'
+      id: 4b6ed23f-8b3b-4f83-a8a4-af87b2480a92
   Photo-2:
     __construct:
-      archive: archive2
+      archive: image2
       description: description2
       private: false
       owner: '@User-1'
+      id: ed7a6086-af5e-4f0d-ad6f-2f3f39bc794a

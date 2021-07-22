@@ -19,10 +19,15 @@ class PhotoInteractService
         $this->photoRepository = $photoRepository;
     }
 
-    public function like($photoId, $userIri): array
+    public function like($photoId, $token): array
     {
         $photo = $this->photoRepository->findOneBy(['id' => $photoId]);
-        $userId = substr($userIri, 11);
+
+        $tokenParts = explode(".", $token);
+        $tokenPayload = base64_decode($tokenParts[1]);
+        $jwtPayload = json_decode($tokenPayload);
+        $userId = $jwtPayload->id;
+
         $liked = in_array($userId, $photo->getUsersLiked(), true);
 
         if ($liked) {

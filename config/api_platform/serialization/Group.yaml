@@ -5,7 +5,7 @@ App\Entity\Group:
     name:
       groups: [ group_read, group_create, group_update ]
     owner:
-      groups: [ group_read, group_create ]
+      groups: [ group_read ]
     numPhotos:
       groups: [ group_read ]
     photos:

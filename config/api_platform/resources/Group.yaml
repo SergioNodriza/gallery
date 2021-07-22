@@ -8,14 +8,20 @@ App\Entity\Group:
 
     create:
       method: POST
-      path: /groups/create
       controller: App\Api\Action\Group\Create
-      denormalization_context:
-        groups: [ group_create ]
+      deserialize: false
       security_post_denormalize: is_granted("GROUP_CREATE", object)
       security_post_denormalize_message: 'Wrong Permissions, You can not create a Group'
       openapi_context:
         summary: Create a new Group
+        requestBody:
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
 
   itemOperations:
     get:

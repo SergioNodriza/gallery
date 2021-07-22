@@ -20,9 +20,14 @@ class GroupCreateService
         $this->userRepository = $userRepository;
     }
 
-    public function create($name, $owner): Group
+    public function create($name, $token): Group
     {
-        $user = $this->userRepository->findOneBy(['id' => substr($owner, 11)]);
+        $tokenParts = explode(".", $token);
+        $tokenPayload = base64_decode($tokenParts[1]);
+        $jwtPayload = json_decode($tokenPayload);
+        $userId = $jwtPayload->id;
+
+        $user = $this->userRepository->findOneBy(['id' => $userId]);
         $group = new Group($name, $user);
 
         try {

@@ -42,7 +42,11 @@ class GroupVoter extends Voter
 
         try {
             if (in_array($attribute, $permissions['group'], true)) {
-                return $subject->isOwnedBy($token->getUser());
+                if ($attribute !== self::GROUP_CREATE) {
+                    return $subject->isOwnedBy($token->getUser());
+                }
+
+                return true;
             }
             return false;
         }  catch (Exception $exception) {

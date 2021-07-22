@@ -33,7 +33,7 @@ class GroupPhotoService
     public function addPhoto($id, $photoIri): array
     {
         $group = $this->groupRepository->findOneBy(['id' => $id]);
-        $photo = $this->photoRepository->findOneBy(['id' => substr($photoIri, 11)]);
+        $photo = $this->photoRepository->findOneBy(['id' => substr($photoIri, 12)]);
         $added = in_array($photo, $group->getPhotos()->toArray(), true);
 
         if ($added) {

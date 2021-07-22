@@ -46,9 +46,14 @@ class Group
      */
     private Collection $photos;
 
-    public function __construct($name, $owner)
+    public function __construct($name, $owner, $id = null)
     {
-        $this->id = Uuid::v4()->toRfc4122();
+        if ($id) {
+            $this->id = $id;
+        } else {
+            $this->id = Uuid::v4()->toRfc4122();
+        }
+
         $this->name = $name;
         $this->owner = $owner;
         $this->photos = new ArrayCollection();

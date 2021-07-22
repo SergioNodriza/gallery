@@ -17,6 +17,27 @@ default:
                 - App\Tests\Behat\RequestContext
                 - App\Tests\Behat\DataBaseContext
                 - App\Tests\Behat\KernelContext
+
+        photos:
+            paths:
+                - tests/features/Photo
+                - tests/features/ResetDataBase.feature
+            contexts:
+                - App\Tests\Behat\Photo\CheckPhotoResponses
+                - App\Tests\Behat\RequestContext
+                - App\Tests\Behat\DataBaseContext
+                - App\Tests\Behat\KernelContext
+
+        groups:
+            paths:
+                - tests/features/Group
+                - tests/features/ResetDataBase.feature
+            contexts:
+                - App\Tests\Behat\Group\CheckGroupResponses
+                - App\Tests\Behat\RequestContext
+                - App\Tests\Behat\DataBaseContext
+                - App\Tests\Behat\KernelContext
+
     extensions:
         FriendsOfBehat\SymfonyExtension:
             kernel:

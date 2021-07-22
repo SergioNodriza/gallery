@@ -112,7 +112,6 @@ class RequestContext implements Context
      */
     public function checkCode(int $code): void
     {
-        $this->printDebug();
         Assert::same($this->getLastResponse()->getStatusCode(), $code);
     }
 

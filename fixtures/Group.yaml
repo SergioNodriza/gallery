@@ -4,7 +4,9 @@ App\Entity\Group:
     __construct:
       name: grupo0
       owner: '@User-0'
+      id: 812ab272-dc78-4fee-a04c-d995c22dc900
   Group-1:
     __construct:
       name: grupo1
       owner: '@User-1'
+      id: 86faaa59-ebcd-4f2d-ad4c-c607d6cbf46f

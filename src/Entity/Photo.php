@@ -62,8 +62,14 @@ class Photo
      */
     private Collection $groups;
 
-    public function __construct($archive, $description, $private, $owner) {
-        $this->id = Uuid::v4()->toRfc4122();
+    public function __construct($archive, $description, $private, $owner, $id = null) {
+
+        if ($id) {
+            $this->id = $id;
+        } else {
+            $this->id = Uuid::v4()->toRfc4122();
+        }
+
         $this->archive = $archive;
         $this->description = $description;
         $this->private = $private;

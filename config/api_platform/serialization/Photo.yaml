@@ -11,7 +11,7 @@ App\Entity\Photo:
     private:
       groups: [ photo_read, photo_create, photo_update ]
     owner:
-      groups: [ photo_read, photo_create ]
+      groups: [ photo_read ]
     usersLiked:
       groups: [ photo_read ]
     groups:
