@@ -4,8 +4,8 @@
     make generate-ssh-keys (pass)
     make run
 
-### TODO
-    testing
-    permisos
-    fotos/grupos - propios/generales
-    archivos fotos de verdad
+### Init
+    docker ps
+    docker stop traefik id
+    make run
+    make ssh-be
