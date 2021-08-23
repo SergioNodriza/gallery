@@ -5,7 +5,5 @@
     make run
 
 ### Init
-    docker ps
-    docker stop traefik id
     make run
     make ssh-be
