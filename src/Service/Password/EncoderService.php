@@ -27,9 +27,4 @@ class EncoderService
 
         return $this->userPasswordEncoder->encodePassword($user, $password);
     }
-
-    public function isValidPassword(User $user, string $oldPassword): bool
-    {
-        return $this->userPasswordEncoder->isPasswordValid($user, $oldPassword);
-    }
 }
