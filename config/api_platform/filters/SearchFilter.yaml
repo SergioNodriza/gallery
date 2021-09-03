@@ -1,0 +1,10 @@
+services:
+  app.custom.search_filter.groups:
+    parent: 'api_platform.doctrine.orm.search_filter'
+    arguments:
+      -
+        owner: exact
+    tags:
+      - { name: 'api_platform.filter', id: 'app.custom.search_filter.groups' }
+    autowire: false
+    autoconfigure: false

@@ -2,6 +2,7 @@ parameters:
 
 imports:
     - { resource: api_platform/filters/BooleanFilter.yaml }
+    - { resource: api_platform/filters/SearchFilter.yaml }
 
 services:
     _defaults:

@@ -3,8 +3,12 @@ App\Entity\Group:
   attributes:
     normalization_context:
       groups: [group_read]
+    filters:
+      - app.custom.search_filter.groups
 
   collectionOperations:
+
+    get: ~
 
     create:
       method: POST
